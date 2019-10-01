@@ -72,9 +72,9 @@ vet2.add_vets_to_list(vet2)
 # Atempting to add user input using input() and while loops and if statements
 print ("RING RING! RING RING")
 user_input = input("Good morning! My name is Dr Dolittle. What can I do for you today? ")
-print("Option 1: Would you like to book an appointment? ")
-print("Option 2: Would you like to settle a bill? ")
-print("Option 3: Would you like to addopt a pet?")
+print("Option 1: I Would like to register my pet with this Vet service? ")
+print("Option 2: I would like to add my pet to an appointment and view the appointment")
+print("Option 3: I Would like to settle a bill? ")
 user_input_decision = input(" ")
 while user_input != "exit":
 
@@ -85,12 +85,21 @@ while user_input != "exit":
         if pet_issue == "pet has a cough".lower().strip() or " pet is sneezing".lower().strip() or "I do not know".lower().strip():
             pet_issue = "Common Ailements"
 
+        print("hmmm it could be a common ailment. We have two available slots.")
+        user_input_date_time = input("Option 1 on 01/10/2019 from 8-11am. Or Option 2 on 03/10/2019 from 2:00pm-4:00pm. Which one would you like?")
 
-    user_input_date_time = input("hmmm it could be a common ailment. We have two available slots. Option 1 on 01/10/2019 from 8-11am. Or Option 2 on 03/10/2019 from 2:00pm-4:00pm. Which one would you like?")
+        if user_input_date_time == "1":
+            appoint_date = "01/10/2019"
+            appoint_time = "8:00am-11:00am"
+        elif user_input_date_time == "2":
+            appoint_date = "03/10/2019"
+            appoint_time = "2:00-4:00pm"
 
-    if user_input_date_time == "1":
-        appoint_date = ["01/10/2019", "8-11am"]
-    elif user_input_date_time == "2"
+        print(f"Excelent your appointment for your pet {pet_name} is on {appoint_date} from {appoint_time}")
+
+    pet6 = Appointment(pet_issue, appoint_date, appoint_time, pet_name, vet1)
+    print(pet_add.name)
+    break
     #if
 
         # user_input_illness = input("Im so sorry to hear that! would you like to book an appointment")
