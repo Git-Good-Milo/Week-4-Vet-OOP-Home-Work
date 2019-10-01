@@ -10,11 +10,12 @@ clent2 = Client_Pet_owner("George", "Best", "459887865", "g.b@coldmail.com", "Ca
 
 
 # Need to be able to create pets
-pet1 = Pet("Daisy", "Jersey: Cow", "George", "Best")
-pet2 = Pet("Steve Jr.", "German Shepard: Dog", "Steve", "Austin")
-pet3 = Pet("Snuffles", "Main Coon: Cat", "Max", "Speed")
-pet4 = Pet("Baby", "Pit Bull: Dog", "Max", "Speed")
-pet5 = Pet("Beelzebub", "Creature Of The Night: Demon", "Mr", "Satan")
+pet1 = Pet("Daisy", "Jersey - Cow", "George", "Best")
+pet2 = Pet("Steve Jr.", "German Shepard - Dog", "Steve", "Austin")
+pet3 = Pet("Snuffles", "Main Coon - Cat", "Max", "Speed")
+pet4 = Pet("Baby", "Pit Bull - Dog", "Max", "Speed")
+pet5 = Pet("Beelzebub", "Creature Of The Night - Demon", "Mr", "Satan")
+pet6 = Pet("Prince", "Golden Eagle - Bird", "George", "Best")
 
 # Need to create Vets
 vet1 = Veternarian("Dr", "Dolittle", "032796195", "dr.dolittle@vets.com", "General Practioner")
@@ -29,17 +30,33 @@ appointment_list = []
 appointment_list.append(appointment1)
 appointment_list.append(appointment2)
 appointment_list.append(appointment3)
-for appointments in appointment_list:
-    print(appointments.pet)
-
 
 # keep a list of pets
-pet1.add_pet_to_list(pet1)
-pet2.add_pet_to_list((pet2))
-pet3.add_pet_to_list((pet3))
-pet4.add_pet_to_list((pet4))
-pet5.add_pet_to_list((pet5))
-print(pet1.pet_details())
+appointment1.add_pet_to_list(pet2)
+appointment1.add_pet_to_list(pet1)
+
+appointment2.add_pet_to_list(pet4)
+appointment2.add_pet_to_list(pet3)
+
+appointment3.add_pet_to_list(pet5)
+appointment3.add_pet_to_list(pet6)
+
+for appointments in appointment_list:
+    print("Pet Name: ", appointments.pet_details()["Pet Name"])
+    print("Disease or Issue: ", appointments.pet_details()["Disease or Issue"])
+    print("Date: ", appointments.pet_details()["Date"])
+    print("Time: ", appointments.pet_details()["Appointment Time"])
+    print("Vet: ", appointments.pet_details()["Vet"])
+    print("////////////////////////////////////////")
+
+print("*********************************************")
+
+for appointments in appointment_list:
+    for pets in (appointments.pet_details()["List of Pets"]):
+        print('Pet Name: ', pets.name, "Breed: ", pets.breed, " Owner Name: ", pets.owner_f_name + " " + pets.owner_l_name)
+        print("///////////////////////////////////////////////////////////")
+
+
 
 # Keep a list of vets
 vet1.add_vets_to_list(vet1)

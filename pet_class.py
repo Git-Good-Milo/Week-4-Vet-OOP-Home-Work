@@ -6,13 +6,13 @@ class Pet():
         self.breed = breed
         self.owner_f_name = owner_f_name
         self.owner_l_name = owner_l_name
-        self.list_of_pets = []
 
-    def add_pet_to_list(self, pets):
-        if self.list_of_pets.append((pets)):
-            return True
-        else:
-            return  False
+
+    # def add_pet_to_list(self, pets):
+    #     if self.list_of_pets.append((pets)):
+    #         return True
+    #     else:
+    #         return  False
 
     def pet_details(self):
         pet_details = \
@@ -20,6 +20,6 @@ class Pet():
             "Pet Name": self.name,
             "Breed": self.breed,
             "Owner Name": self.owner_f_name + " " + self.owner_l_name,
-            "List of Pets": self.list_of_pets
+
         }
         return pet_details

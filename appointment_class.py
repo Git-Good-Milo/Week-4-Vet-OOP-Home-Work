@@ -2,19 +2,30 @@
 
 class Appointment():
 
-    def __init__(self, disease, date,time, pet, vet ):
+    def __init__(self, disease, date, time, pet, vet ):
         self.disease = disease
         self.date = date
         self.appointment_time = time
-        self.pet = pet,
+        self.pet = pet
         self.vet = vet
-        self.list_appointments = []
         self.list_of_pets = []
 
-    def add_to_appointments(self, appointment):
-        if self.list_appointments.append(appointment):
+
+    def add_pet_to_list(self, pets):
+        if self.list_of_pets.append(pets):
             return True
         else:
-            return False
+            return  False
 
+    def pet_details(self):
+        pet_details = {
+            "Pet Name": self.pet.name,
+            "Disease or Issue": self.disease,
+            "Date": self.date,
+            "Appointment Time": self.appointment_time,
+            "Vet": self.vet.name,
+            "List of Pets": self.list_of_pets
+
+        }
+        return pet_details
 
