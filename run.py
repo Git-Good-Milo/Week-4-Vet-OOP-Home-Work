@@ -80,10 +80,13 @@ while user_input != "exit":
 
     if user_input_decision == "1":
         pet_name = input("What is the name of your pet?")
-        pet_issue = input("What seems to be the issue?")
-
-        if pet_issue == "pet has a cough".lower().strip() or " pet is sneezing".lower().strip() or "I do not know".lower().strip():
-            pet_issue = "Common Ailements"
+        pet_breed = input("What breed is your pet?")
+        pet_owner_f_name = input("What is your first name?")
+        pet_owner_l_name = input("What is your last name?")
+        # pet_issue = input("What seems to be the issue?")
+        #
+        # if pet_issue == "pet has a cough".lower().strip() or " pet is sneezing".lower().strip() or "I do not know".lower().strip():
+        #     pet_issue = "Common Ailements"
 
         print("hmmm it could be a common ailment. We have two available slots.")
         user_input_date_time = input("Option 1 on 01/10/2019 from 8-11am. Or Option 2 on 03/10/2019 from 2:00pm-4:00pm. Which one would you like?")
@@ -107,3 +110,31 @@ while user_input != "exit":
         # if user_input_illness == "yes".lower().strip():
         #     ueser_input_appointment = input("")
         #     break
+
+
+
+####
+    if user_input_decision == "1":
+        pet_name = input("What is the name of your pet?")
+        pet_breed = input("What breed is your pet?")
+        pet_owner_f_name = input("What is your first name?")
+        pet_owner_l_name = input("What is your last name?")
+        # pet_issue = input("What seems to be the issue?")
+        #
+        # if pet_issue == "pet has a cough".lower().strip() or " pet is sneezing".lower().strip() or "I do not know".lower().strip():
+        #     pet_issue = "Common Ailements"
+
+    #     print("hmmm it could be a common ailment. We have two available slots.")
+    #     user_input_date_time = input("Option 1 on 01/10/2019 from 8-11am. Or Option 2 on 03/10/2019 from 2:00pm-4:00pm. Which one would you like?")
+    #
+    #     if user_input_date_time == "1":
+    #         appoint_date = "01/10/2019"
+    #         appoint_time = "8:00am-11:00am"
+    #     elif user_input_date_time == "2":
+    #         appoint_date = "03/10/2019"
+    #         appoint_time = "2:00-4:00pm"
+    #
+    #     print(f"Excelent your appointment for your pet {pet_name} is on {appoint_date} from {appoint_time}")
+    #
+    # pet6 = Appointment(pet_issue, appoint_date, appoint_time, pet_name, vet1)
+    # print(pet_add.name)
